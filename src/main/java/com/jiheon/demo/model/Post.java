@@ -1,61 +1,30 @@
 package com.jiheon.demo.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
 public class Post {
-    private String postId;
+
+    @Id @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID postId;
     private String title;
     private String contents;
     private String author;
     private LocalDateTime createdDateTime;
-
-    public static Builder builder(){
-        return new Builder();
-    }
-
-    public static class Builder{
-        private String postId;
-        private String title;
-        private String contents;
-        private String author;
-        private LocalDateTime createdDateTime;
-
-
-
-        public Builder postId(String postId){
-            this.postId = postId;
-            return this;
-        }
-
-        public Builder title(String title){
-            this.title = title;
-            return this;
-        }
-        public Builder contents(String contents){
-            this.contents = contents;
-            return this;
-        }
-        public Builder author(String author){
-            this.author = author;
-            return this;
-        }
-        public Builder createdDateTime(LocalDateTime createdDateTime){
-            this.createdDateTime = createdDateTime;
-            return this;
-        }
-
-        public Post build(){
-            System.out.println(createdDateTime);
-            return new Post(postId, title,contents,author,createdDateTime);
-
-        }
-
-    }
 
 
 }
