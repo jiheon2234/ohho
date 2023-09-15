@@ -1,6 +1,6 @@
 package com.jiheon.demo.service;
 
-import com.jiheon.demo.PostRepository.PostRepository;
+import com.jiheon.demo.repository.PostRepository.PostRepository;
 import com.jiheon.demo.mapper.PostMapper;
 import com.jiheon.demo.model.Post;
 import jakarta.annotation.PostConstruct;

@@ -1,4 +1,4 @@
-package com.jiheon.demo.PostRepository;
+package com.jiheon.demo.repository.PostRepository;
 
 import com.jiheon.demo.model.Post;
 import org.springframework.data.jpa.repository.JpaRepository;

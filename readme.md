@@ -3,4 +3,13 @@
 
 ## 1.웹 ..
 
+---
 
+## 2. DB
+-  TypeHandler를 통해서, mybatis의 필드도 객체를 받을 수 있다
+---
+
+## 3. 보안
+- UserDetailsService :  사용자 세부 정보 (DB에서 조회할 때 사용)
+- AuthenticationProvider : `authenticate(Authentication authentication)` 실제 사용자 인증 수행
+- AuthenticationManager : 인증 요청을 적절한 `AuthenticationProvider`에 위임

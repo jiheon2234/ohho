@@ -13,7 +13,7 @@ services:
       - mariadb:/var/lib/mysql
     environment:
       MARIADB_ROOT_PASSWORD: 0000
-      MYSQLD_LOWER_CASE_TABLE_NAMES: 0
+      MYSQLD_LOWER_CASE_TABLE_NAMES: 1
 
 volumes:
   mariadb:
